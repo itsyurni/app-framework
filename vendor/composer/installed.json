@@ -1,0 +1,42 @@
+{
+    "packages": [
+        {
+            "name": "yurni/mvc-mvc",
+            "version": "v0.0.1",
+            "version_normalized": "0.0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/itsyurni/yurni-mvc.git",
+                "reference": "9f7c0e9e64add6ad4455ec289a2a08ee166ab0d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/itsyurni/yurni-mvc/zipball/9f7c0e9e64add6ad4455ec289a2a08ee166ab0d7",
+                "reference": "9f7c0e9e64add6ad4455ec289a2a08ee166ab0d7",
+                "shasum": ""
+            },
+            "time": "2022-01-30T12:38:09+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "yurni\\framework\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Harizi Riyadh",
+                    "email": "harizi.harizi@gmail.com"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/itsyurni/yurni-mvc/issues",
+                "source": "https://github.com/itsyurni/yurni-mvc/tree/v0.0.1"
+            },
+            "install-path": "../yurni/mvc-mvc"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}
