@@ -1,4 +1,5 @@
 {
+	"name": "yurni/core-framework",
     "require": {
         "yurni/mvc-mvc": "^0.0.1"
     },
