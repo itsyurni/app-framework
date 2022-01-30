@@ -7,7 +7,7 @@
         }
     ],
     "require": {
-        "yurni/mvc-mvc": "^0.0.1"
+        "yurni/core-framework": "^0.0.1"
     },
     "autoload": {
         "psr-4": {
