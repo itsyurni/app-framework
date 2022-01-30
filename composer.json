@@ -1,5 +1,11 @@
 {
-	"name": "yurni/core-framework",
+    "name": "yurni/core-framework",
+    "authors": [
+        {
+            "name": "Harizi Riyadh",
+            "email": "harizi.harizi@gmail.com"
+        }
+    ],
     "require": {
         "yurni/mvc-mvc": "^0.0.1"
     },
