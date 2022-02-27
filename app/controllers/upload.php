@@ -6,7 +6,10 @@ use yurni\framework\Controller;
 
 
 class upload extends Controller{
-    
+    public function before(){
+        return false;
+    }
+
     public function index(Request $req){
 
         if($req->isPost()){

@@ -1,37 +1,28 @@
 <?php
+require __DIR__.'/../vendor/autoload.php';
 
 use app\controllers\home;
 use app\controllers\upload;
-require __DIR__.'/../vendor/autoload.php';
-
-
 use yurni\framework\Application;
 use yurni\framework\Http\Request;
 use yurni\framework\Http\Response;
-use yurni\framework\db;
-
-/**
- * Version V0.1 MVC
- * 
- * Develope Request File
- * Add Models Systems
- * Add Database Systems
- * Add Confing Systems using .env
-*/
-
-
+use yurni\framework\Model;
 
 $app = new Application();
 
-$app->get("/",[home::class,"index"]);  
-$app->get("/db",function(){
-    $db = db::instance();
-    $db->insert("users",["email"=>"okgg"]);
-});  
-$app->get("/upload",[upload::class,"index"]);
-$app->post("/upload",[upload::class,"index"]);
-$app->get("/upload/multiple",[upload::class,"multiple"]);
-$app->post("/upload/multiple",[upload::class,"multiple"]);
+$app->setMiddleware("auth",function(Response $res)  {
+    return true;
+});
+
+$app->get("/",function(){
+    echo "Hello Yurni !";
+})->auth();
+$app->only(["get","post"],"/upload",[upload::class,"index"]);
+
+
+$app->getRouter()->handle("404",function(Response $res){
+    return $res->json(["error"=>404])->setStatusCode(404)->body;
+});
 
 
 $app->run();
