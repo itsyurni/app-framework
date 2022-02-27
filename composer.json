@@ -1,0 +1,22 @@
+{
+    "name": "yurni/app-framework",
+    "authors": [
+        {
+            "name": "Harizi Riyadh",
+            "email": "harizi.harizi@gmail.com"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "app\\" : "app/",
+            "yurni\\framework\\": "../core-framework/"
+        }
+    },
+    "require": {
+        "paypal/rest-api-sdk-php": "*",
+        "yurni/core-framework": "^0.2.0",
+        "vlucas/phpdotenv": "^5.4"
+    }
+    
+}
